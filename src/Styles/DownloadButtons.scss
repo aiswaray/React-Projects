@@ -1,0 +1,43 @@
+$font-family: "Montserrat", sans-serif;
+$secondary-color: #122b38;
+
+.download-buttons {
+    text-align: center;
+    margin: 0 15px 30px;
+    position: relative;
+  
+    h2 {
+      margin:0px;
+      color:$secondary-color;
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      top:30px;
+    }
+  
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  
+      .download-icon {
+        width: 150px;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+  @media (max-width: 540px) {
+    .download-buttons {
+      .icons {
+        .download-icon {
+          width: 134px;
+        }
+    }
+
+    }
+
+  }

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.error {
+  color: rgb(240, 82, 82);
+  font-size: 12px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

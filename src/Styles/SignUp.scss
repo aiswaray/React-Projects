@@ -1,0 +1,256 @@
+// Variables for colors and other styles
+$primary-color: #f8faff;
+$secondary-color: #122b38;
+$button-background: #122b38;
+$button-hover:#f2682e;
+$button-color: #fff;
+$font-family: "Montserrat", sans-serif;
+
+.register {
+
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    background-color: $primary-color;
+
+    .bg-top-right,
+    .bg-bottom-left {
+      position: absolute;
+      z-index: 1;
+    }
+  
+    .bg-top-right {
+        top: -303px;
+        right: -59px;
+        width:460px;
+    }
+  
+    .bg-bottom-left {
+        bottom: -140px;
+        left: -71px;
+        width: 600px;
+    }
+
+    .content-outer {
+      background:none;
+      padding:20px;
+      border-radius: 10px;
+      text-align: center;
+      width:700px;
+      z-index: 2;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .logo {
+        width: 60px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      width: 100%;
+    }
+  
+    .input-group {
+      flex: 1 1 45%;
+      position: relative;
+      margin-bottom: 20px;
+  
+      input {
+        width: 90%;
+        padding: 18px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+  
+        &:hover {
+          border-color: #3aabe8;
+        }
+  
+        &:active {
+          border-color: #1e8ccc;
+          box-shadow: 0 0 5px rgba(58, 171, 232, 0.5);
+        }
+      }
+
+      input::placeholder {
+        color: #a2a2a2;
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
+      }
+  
+      .toggle-password {
+            border-Radius:50%;
+            padding:5px;
+            color:rgb(137, 137, 137);
+            position:absolute;
+            right:25px;
+            font-size: 20px;
+            display:flex;
+            font-family: "Montserrat", sans-serif;
+            top: 12px;
+        }
+    }
+  
+    .options-radio {
+        display: flex;
+        align-items: center;
+        margin-bottom: 22px;
+        position:relative;
+      }
+      
+      .options-radio label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .options-radio input[type="radio"] {
+        display: none;
+      }
+      .options-radio label::before {
+        content: "";
+        display: inline-block;
+        width: 12px; 
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid $secondary-color;
+        margin-right: 10px; 
+        position: relative;
+        vertical-align: middle;
+      }
+      .options-radio input[type="radio"]:checked + span::before {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+      .options-radio label span::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left:2%;
+        transform: translate(-45%, -50%);
+      }
+      .options-radio input[type="radio"]:checked + span::before {
+        background-color:$secondary-color;
+        border-color:$secondary-color;
+      }
+  
+    .main-buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+  
+      .register-btn {
+        background-color: $button-background;
+        color: $button-color;
+        border: none;
+        padding: 16px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: $font-family;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        width: 50%;
+  
+        &:hover {
+            background-color: $button-hover;
+        }
+      }
+    }
+  
+    .error-message {
+      color: red; 
+      font-size: 12px;
+      margin-top: -15px; 
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+@media (max-width: 768px) {
+    .register {
+        .bg-top-right {
+            top: -303px;
+            right: -59px;
+            width:454px;
+        }
+      
+        .bg-bottom-left {
+            bottom: -80px;
+            left: -70px;
+            width: 300px;
+        }
+      .content-outer {
+        padding: 30px;
+        .input-row {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .register {
+        .bg-top-right {
+            top: -303px;
+            right: -59px;
+            width:454px;
+        }
+        .bg-bottom-left {
+            display: none;
+        }
+      .content-outer {
+        padding: 20px;
+        margin-bottom: 70px;
+        .logo {
+            width: 54px;
+            margin-bottom:0;
+        }
+        h2 {
+            font-size: 18px
+        }
+        form {
+        gap: 0;
+          .input-row {
+            gap: 0;
+            .input-group {
+              input {
+                font-size: 14px;
+                padding: 10px;
+              }
+              .toggle-password {
+                top: 3px;
+              }
+            }
+          }
+          .main-buttons {
+            gap: 0px;
+            margin-bottom: 10px;
+            .register-btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,31 @@
+$font-family: "Montserrat", sans-serif;
+
+.footer {
+  text-align: center;
+  padding: 0;
+  color: #122b38;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  bottom: 10px;
+  right: 152px;
+  font-weight: 500;
+
+    p.footer-cnt {
+      font-size: 13px;
+      margin: 0;
+    }
+    
+  }
+
+  @media (max-width: 912px) {
+    .footer {
+      right: 10px;
+    }
+
+  }
+
+  @media (max-width: 540px) {
+    .footer {
+      bottom: 60px;
+    }
+  }
